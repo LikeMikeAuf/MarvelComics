@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="-7" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="MarvelComics" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="333" height="139"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="333" height="139"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait_xlarge_comicThumb" translatesAutoresizingMaskIntoConstraints="NO" id="dzf-NW-VEi">
+                        <rect key="frame" x="10" y="10" width="85" height="119"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="85" id="GpU-6g-NuE"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AET-iZ-dmO">
+                        <rect key="frame" x="102" y="31" width="221" height="98"/>
+                        <string key="text">The phone rings, and killer-for-hire Harvey embarks on another hit. But nothing's going right this job. There's little room for error in the business of killing - so what happens when one occurs?\r\n32 PGS./ PARENTAL ADVISORY ...$2.50</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gun Theory (2003) #4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efb-YE-Wfl">
+                        <rect key="frame" x="102" y="10" width="221" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="rVo-iQ-3x4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="AET-iZ-dmO" secondAttribute="bottom" constant="10" id="6Xz-MR-0z6"/>
+                    <constraint firstItem="dzf-NW-VEi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="96d-PZ-AkA"/>
+                    <constraint firstItem="AET-iZ-dmO" firstAttribute="top" secondItem="efb-YE-Wfl" secondAttribute="bottom" id="FNv-aI-ySc"/>
+                    <constraint firstItem="dzf-NW-VEi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="IGS-Iq-csK"/>
+                    <constraint firstItem="AET-iZ-dmO" firstAttribute="leading" secondItem="dzf-NW-VEi" secondAttribute="trailing" constant="7" id="Q2h-bx-szj"/>
+                    <constraint firstAttribute="trailing" secondItem="efb-YE-Wfl" secondAttribute="trailing" constant="10" id="a5Y-YY-zuc"/>
+                    <constraint firstAttribute="bottom" secondItem="dzf-NW-VEi" secondAttribute="bottom" constant="10" id="hvu-7K-VqH"/>
+                    <constraint firstItem="efb-YE-Wfl" firstAttribute="leading" secondItem="dzf-NW-VEi" secondAttribute="trailing" constant="7" id="jPt-pS-ebW"/>
+                    <constraint firstItem="efb-YE-Wfl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="uaO-BC-Ph8"/>
+                    <constraint firstAttribute="trailing" secondItem="AET-iZ-dmO" secondAttribute="trailing" constant="10" id="vhh-Oh-Yn7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="comicDescription" destination="AET-iZ-dmO" id="Ifo-Sh-7LW"/>
+                <outlet property="comicThumbnail" destination="dzf-NW-VEi" id="pB5-7S-0U9"/>
+            </connections>
+            <point key="canvasLocation" x="148.55072463768118" y="152.34375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="portrait_xlarge_comicThumb" width="150" height="225"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

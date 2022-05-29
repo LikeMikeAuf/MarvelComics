@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="138" id="KGk-i7-Jjw" customClass="ComicTableCell" customModule="MarvelComics" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="314" height="138"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="314" height="138"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="portrait_xlarge_comicThumb" translatesAutoresizingMaskIntoConstraints="NO" id="Hmd-y5-vCc">
+                        <rect key="frame" x="10" y="10" width="79.5" height="118"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Hmd-y5-vCc" secondAttribute="height" multiplier="85:126" id="CDb-Gp-Htk"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ant-Man (2003) #4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BnK-dv-9vT">
+                        <rect key="frame" x="96.5" y="10" width="207.5" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="dT4-CE-ESN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTU-CN-Ssy">
+                        <rect key="frame" x="96.5" y="34" width="207.5" height="93.5"/>
+                        <string key="text">Ant-Man digs deeper into finding out who is leaking those dirty little secrets that are threatening our national security. And who's better at uncovering dirty LITTLE secrets than him??</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="BnK-dv-9vT" secondAttribute="trailing" constant="10" id="CfG-kw-8LU"/>
+                    <constraint firstItem="Hmd-y5-vCc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="JIa-lj-8BK"/>
+                    <constraint firstAttribute="trailing" secondItem="eTU-CN-Ssy" secondAttribute="trailing" constant="10" id="bxs-g7-yeZ"/>
+                    <constraint firstItem="BnK-dv-9vT" firstAttribute="leading" secondItem="Hmd-y5-vCc" secondAttribute="trailing" constant="7" id="cPC-zR-Lvw"/>
+                    <constraint firstItem="eTU-CN-Ssy" firstAttribute="leading" secondItem="Hmd-y5-vCc" secondAttribute="trailing" constant="7" id="fhU-rL-kzV"/>
+                    <constraint firstItem="BnK-dv-9vT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="g7y-VR-aJ3"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="eTU-CN-Ssy" secondAttribute="bottom" constant="10" id="hNw-RC-6fA"/>
+                    <constraint firstItem="Hmd-y5-vCc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="n9h-D4-KGo"/>
+                    <constraint firstItem="eTU-CN-Ssy" firstAttribute="top" secondItem="BnK-dv-9vT" secondAttribute="bottom" constant="3" id="o6z-SR-AAw"/>
+                    <constraint firstAttribute="bottom" secondItem="Hmd-y5-vCc" secondAttribute="bottom" constant="10" id="pGG-5E-xGg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="comicDescription" destination="eTU-CN-Ssy" id="MOg-Ia-wyS"/>
+                <outlet property="comicThumbnail" destination="Hmd-y5-vCc" id="apP-Wj-OQK"/>
+                <outlet property="comicTitle" destination="BnK-dv-9vT" id="p8I-vc-1th"/>
+            </connections>
+            <point key="canvasLocation" x="133.33333333333334" y="160.71428571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="portrait_xlarge_comicThumb" width="150" height="225"/>
+    </resources>
+</document>
